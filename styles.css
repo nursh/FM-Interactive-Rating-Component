@@ -1,0 +1,20 @@
+:root {
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-grey-950: #131518;
+  --clr-grey-900: #262E38;
+  --clr-grey-500: #969FAD;
+  --clr-orange: #FC7614;
+
+  --clr-gradient: linear-gradient(to right, #232A34, #181E27);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  
+}
