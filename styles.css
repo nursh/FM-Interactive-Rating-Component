@@ -1,4 +1,13 @@
 :root {
+
+  --spg-100: 0.5rem;
+  --spg-200: 1rem;
+  --spg-300: 1.5rem;
+  --spg-400: 2rem;
+  --spg-500: 2.5rem;
+  --spg-1300: 6.5rem;
+  --spg-1700: 8.5rem;
+
   --clr-white: #ffffff;
   --clr-black: #000000;
   --clr-grey-950: #131518;
@@ -6,7 +15,14 @@
   --clr-grey-500: #969FAD;
   --clr-orange: #FC7614;
 
-  --clr-gradient: linear-gradient(to right, #232A34, #181E27);
+  --txt-1: 1.75rem;
+  --txt-2: 1.5rem;
+  --txt-3: 1rem;
+  --txt-4: 0.9375rem;
+  --txt-5: 0.875rem;
+
+  --clr-gradient: radial-gradient(#232A34, #181E27);
+  --sm-radius: 0.9375rem;
 }
 
 *,
@@ -16,5 +32,41 @@
 }
 
 body {
-  
+  font-family: "Overpass", sans-serif;
+  background-color: var(--clr-grey-950);
+  color: var(--clr-white);
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: var(--clr-gradient);
+  border-radius: var(--sm-radius);
+  padding: 1.75rem 1.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--clr-grey-500);
+}
+
+button {
+  border: none;
+  background-color: var(--clr-orange);
+  border-radius: 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a:link {
+  color: var(--clr-white);
 }
