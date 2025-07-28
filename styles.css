@@ -32,6 +32,8 @@
 }
 
 body {
+  min-height: 100vh;
+  min-height: 100svh;
   font-family: "Overpass", sans-serif;
   background-color: var(--clr-grey-950);
   color: var(--clr-white);
@@ -43,15 +45,16 @@ main {
   background: var(--clr-gradient);
   border-radius: var(--sm-radius);
   padding: 1.75rem 1.5rem;
+  width: clamp(20.5rem, 15.4rem + 20vw, 26rem);
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: var(--txt-2);
   font-weight: 700;
 }
 
 p {
-  font-size: 0.875rem;
+  font-size: var(--txt-5);
   line-height: 1.5;
   color: var(--clr-grey-500);
 }
@@ -60,13 +63,52 @@ button {
   border: none;
   background-color: var(--clr-orange);
   border-radius: 1.5rem;
+  padding-block: var(--spg-200);
+  font-size: var(--txt-5);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  width: 100%;
+}
+
+.form-groups {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: var(--txt-5);
   text-align: center;
 }
 
 .attribution a:link {
   color: var(--clr-white);
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.625rem;
+  height: 2.625rem;
+  background-color: var(--bg-clr, var(--clr-grey-900));
+  color: var(--txt-clr, var(--clr-grey-500));
+  padding: var(--spg-100) var(--spg-200);
+  font-size: var(--txt-5);
+  border-radius: 1.3125rem;
+}
+
+label:hover {
+  --bg-clr: var(--clr-white);
+  --txt-clr:  var(--clr-grey-900);
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+
+input[type="radio"]:checked + label {
+  --bg-clr: var(--clr-orange);
+  --txt-clr: var(--clr-grey-900);
 }
