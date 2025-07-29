@@ -7,20 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
@@ -29,16 +16,16 @@
 
 <body>
   <main>
-      <!-- Thank you state start -->
+    <img src="./images/illustration-thank-you.svg" alt="">
+    <p>You selected <span id="rating"></span> out of 5</p>
 
-  You selected <!-- Add rating here --> out of 5
+    <h1>Thank you!</h1>
 
-  Thank you!
+    <p>
+      We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!
+    </p>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
 
   </main>
   <rooter class="attribution">
@@ -47,6 +34,10 @@
       Coded by <a href="#">Nur-sh</a>.
     </p>
     </footer>
+  <script>
+    const rating = window.localStorage.getItem('rating');
+    document.getElementById('rating').textContent = rating;
+  </script>
 </body>
 
 </html>
