@@ -50,6 +50,10 @@ main {
   width: clamp(20.5rem, 15.4rem + 20vw, 26rem);
 }
 
+.rating-container {
+  text-align: center;
+}
+
 .flow > * + * {
   margin-block-start: var(--flow-gap, var(--spg-200));
 }
@@ -84,6 +88,17 @@ p {
   font-size: clamp(var(--txt-5), 0.8175rem + 0.25vw, var(--txt-4));
   line-height: 1.5;
   color: var(--clr-grey-500);
+}
+
+.rating-text {
+  color: var(--clr-orange);
+  background-color: var(--clr-grey-900);
+  padding-inline: var(--spg-200);
+  border-radius: 1.4rem;
+  width: max-content;
+  margin-inline: auto;
+
+  --flow-gap: var(--spg-300);
 }
 
 button {
