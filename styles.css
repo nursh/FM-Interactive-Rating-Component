@@ -21,6 +21,8 @@
   --txt-4: 0.9375rem;
   --txt-5: 0.875rem;
 
+  --label-dim: clamp(2.625rem, 2.1075rem + 2.25vw, 3.1875rem);
+
   --clr-gradient: radial-gradient(#232A34, #181E27);
   --sm-radius: 0.9375rem;
 }
@@ -48,13 +50,38 @@ main {
   width: clamp(20.5rem, 15.4rem + 20vw, 26rem);
 }
 
+.flow > * + * {
+  margin-block-start: var(--flow-gap, var(--spg-200));
+}
+
+div:has(.rating-star) {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  background-color: var(--clr-grey-900);
+  display: grid;
+  place-items: center;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.rating-star {
+  display: block;
+}
+
 h1 {
-  font-size: var(--txt-2);
+  font-size: clamp(var(--txt-2), 1.27rem + 1vw, var(--txt-1));
   font-weight: 700;
+
+  --flow-gap: clamp(var(--spg-300), 1.04rem + 2vw, var(--spg-400));
 }
 
 p {
-  font-size: var(--txt-5);
+  font-size: clamp(var(--txt-5), 0.8175rem + 0.25vw, var(--txt-4));
   line-height: 1.5;
   color: var(--clr-grey-500);
 }
@@ -65,10 +92,16 @@ button {
   border-radius: 1.5rem;
   padding-block: var(--spg-200);
   font-size: var(--txt-5);
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 600;
+  text-transform: uppercase; 
   letter-spacing: 0.1rem;
   width: 100%;
+
+  --flow-gap: clamp(var(--spg-300), 1.04rem + 2vw, var(--spg-400));;
+}
+
+button:hover {
+  background-color: var(--clr-white);
 }
 
 .form-groups {
@@ -82,21 +115,20 @@ button {
   text-align: center;
 }
 
-.attribution a:link {
+.attribution a:any-link {
   color: var(--clr-white);
 }
 
 label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.625rem;
-  height: 2.625rem;
+  display: grid;
+  place-items: center;
+  width: var(--label-dim);
+  height: var(--label-dim);
   background-color: var(--bg-clr, var(--clr-grey-900));
   color: var(--txt-clr, var(--clr-grey-500));
   padding: var(--spg-100) var(--spg-200);
-  font-size: var(--txt-5);
-  border-radius: 1.3125rem;
+  font-size: clamp(var(--txt-5), 0.76rem + 0.5vw, var(--txt-3));
+  border-radius: clamp(1.3125rem, 1.025rem + 1.25vw, 1.625rem);
 }
 
 label:hover {
@@ -106,6 +138,7 @@ label:hover {
 
 input[type="radio"] {
   appearance: none;
+  display: none;
 }
 
 input[type="radio"]:checked + label {
