@@ -46,8 +46,8 @@ body {
 main {
   background: var(--clr-gradient);
   border-radius: var(--sm-radius);
-  padding: 1.75rem 1.5rem;
-  width: clamp(20.5rem, 15.4rem + 20vw, 26rem);
+  padding: clamp(var(--spg-400), 1.54rem + 2vw,var(--spg-500)) clamp(var(--spg-300), 1.04rem + 2vw, var(--spg-400)) ;
+  width: clamp(20.5rem, 15.4rem + 20vw, 25rem);
 }
 
 .rating-container {
@@ -93,12 +93,12 @@ p {
 .rating-text {
   color: var(--clr-orange);
   background-color: var(--clr-grey-900);
-  padding-inline: var(--spg-200);
+  padding: var(--spg-100) var(--spg-200);
   border-radius: 1.4rem;
   width: max-content;
   margin-inline: auto;
 
-  --flow-gap: var(--spg-300);
+  --flow-gap: clamp(var(--spg-300), 1.04rem + 2vw, var(--spg-400));
 }
 
 button {
