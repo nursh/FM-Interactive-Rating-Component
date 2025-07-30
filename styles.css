@@ -112,7 +112,7 @@ button {
   letter-spacing: 0.1rem;
   width: 100%;
 
-  --flow-gap: clamp(var(--spg-300), 1.04rem + 2vw, var(--spg-400));;
+  --flow-gap: clamp(var(--spg-300), 1.04rem + 2vw, var(--spg-400));
 }
 
 button:hover {
